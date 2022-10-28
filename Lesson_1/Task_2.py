@@ -4,5 +4,4 @@
 for x in [1, 0]:
     for y in [1, 0]:
         for z in [1, 0]:
-            print(x, y, z, not (x or y or z) == (
-                not x) and (not y) and (not z))
+            print(x, y, z, not (x or y or z) == (not x and not y and not z))
