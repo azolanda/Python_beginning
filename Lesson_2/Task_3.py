@@ -21,7 +21,7 @@ def sequence_sum(seq):
 
 number = input('Введите натуральное число n: ')
 
-if number.isdigit():
+if number.isdigit() and int(number) > 0:
     seq_list = make_sequence(int(number))
     print(f'Для n = {number} {seq_list} сумма {sequence_sum(seq_list)}')
 else:

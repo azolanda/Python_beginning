@@ -21,7 +21,7 @@ def make_factorial_list(num):
 
 number = input("Введите натуральное число: ")
 
-if number.isdigit():
+if number.isdigit() and int(number) > 0:
     print(
         f'Набор произведений чисел от 1 до {number} равно {make_factorial_list(int(number))}')
 else:
