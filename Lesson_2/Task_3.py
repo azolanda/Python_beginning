@@ -19,7 +19,7 @@ def sequence_sum(seq):
     return sum
 
 
-number = input('Введите нутуральное число n: ')
+number = input('Введите натуральное число n: ')
 
 if number.isdigit():
     seq_list = make_sequence(int(number))
