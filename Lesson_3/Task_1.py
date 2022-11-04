@@ -27,7 +27,7 @@ def odd_sum(list):
     return sum
 
 
-number = input('Введите натуральное число n: ')
+number = input('Введите натуральное число n (количество элементов списка): ')
 
 if number.isdigit() and int(number) > 0:
     number = int(number)
