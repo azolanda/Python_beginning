@@ -22,7 +22,6 @@ def pair_multiple(list):
     high_border = int(len(list)/2)
     if len(list) % 2 == 1:
         high_border += 1
-    print(high_border)
     for i in range(0, high_border):
         mult_list.append(list[i] * list[j])
         j -= 1
