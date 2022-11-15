@@ -6,12 +6,6 @@
 #     Для n=4 {1: 2, 2: 2.25, 3: 2.37, 4: 2.44}
 #     Сумма 9.06
 
-def sequence_sum(seq):
-    sum = 0
-    for i in seq:
-        sum += seq[i]
-    return sum
-
 
 num = input('Введите натуральное число n: ')
 
