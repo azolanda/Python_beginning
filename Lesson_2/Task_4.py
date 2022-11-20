@@ -12,7 +12,7 @@ def make_list(num):
     return num_list
 
 
-def multiply_elements(list):
+def multiply_elements(list, number):
     pos_a = input(
         f'Введите позицию в списке первого множителя от 0 до {number - 1}: ')
     pos_b = input(
@@ -32,6 +32,6 @@ number = input('Введите натуральное число n: ')
 if number.isdigit() and int(number) > 0:
     number = int(number)
     number_list = make_list(number)
-    multiply_elements(number_list)
+    multiply_elements(number_list, number)
 else:
     print('Ошибка. Ввод в неверном формате, введено не натуральное число. Введите натуральное число.')
