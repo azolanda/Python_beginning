@@ -18,7 +18,6 @@ def init_tel(t):
 
 
 def init_book(format):
-    # global book
     with open(data_format[format], 'r') as phones:
         return [x[:-1].split(' | ') for x in phones.readlines()]
 

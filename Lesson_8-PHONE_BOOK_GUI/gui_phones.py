@@ -4,7 +4,7 @@ from kivy.properties import ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
 
 from kivy.uix.label import Label
-from kivy.uix.button import Button
+
 import model
 
 
@@ -71,7 +71,7 @@ class PhonesContainer(BoxLayout):
                 gp.add_widget(self.label)
                 gp.add_widget(
                     Label(text=result[i][1], color="#333233"))
-            self.result_label.text = f'Успешно найдено: {result}'
+            self.result_label.text = f'Запрос на поиск выполнен успешно'
         else:
             self.result_label.text = result
 
@@ -89,4 +89,5 @@ class PhonesContainer(BoxLayout):
 
 class PhonesApp(App):
     def build(self):
+        self.title = 'Телефонный справочник'
         return PhonesContainer()
