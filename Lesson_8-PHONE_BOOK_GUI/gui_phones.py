@@ -4,7 +4,7 @@ from kivy.properties import ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
 
 from kivy.uix.label import Label
-
+from kivy.uix.button import Button
 import model
 
 
@@ -52,6 +52,7 @@ class PhonesContainer(BoxLayout):
         model.init_name('empty_name')
         model.init_tel('empty_tel')
         self.kv_init_book()
+        self.result_label.text = ''
         self.result_label.text = result
 
     def kv_find(self):
@@ -71,10 +72,11 @@ class PhonesContainer(BoxLayout):
                 gp.add_widget(
                     Label(text=result[i][1], color="#333233"))
             self.result_label.text = f'Успешно найдено: {result}'
-            self.find_name.text = ''
-            model.init_name('empty_name')
         else:
             self.result_label.text = result
+
+        self.find_name.text = ''
+        model.init_name('empty_name')
 
     def kv_del(self):
         self.kv_init_name()

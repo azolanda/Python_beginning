@@ -1,5 +1,5 @@
-data_format = {'1': './Lesson_7-PHONE_BOOK/book_phones-first.txt',
-               '2': './Lesson_7-PHONE_BOOK/book_phones-second.txt'}
+data_format = {'1': './Lesson_8-PHONE_BOOK_GUI/book_phones-first.txt',
+               '2': './Lesson_8-PHONE_BOOK_GUI/book_phones-second.txt'}
 
 name = 'empty_name'
 tel = 'empty_tel'
