@@ -1,0 +1,100 @@
+#:kivy 1.0
+
+<PhonesContainer>:
+    orientation: 'vertical'
+    grid_phones: grid_phones
+    find_name: find_name
+    enter_name: enter_name
+    enter_tel: enter_tel
+    result_label: result_label
+
+    padding: 5
+    spacing: 5
+    canvas:
+        Color:
+            rgba: (0.6,0.7,0.6,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        size_hint_y: .93
+        spacing: 5
+            
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: .3
+
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: 10
+                
+                TextInput:
+                    id: find_name
+                    hint_text:'Введите имя/телефон'
+                    multiline: False
+                    font_size: 16 
+                    size_hint_y: .2
+                Button:
+                    size_hint_y: .2
+                    text: 'Найти'
+                    on_release:
+                        root.kv_find()
+                Button:
+                    size_hint_y: .2
+                    text: 'Удалить'
+                    on_release:
+                        root.kv_del()
+                Widget:
+                
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: 10
+                
+                TextInput:
+                    id: enter_name
+                    hint_text: 'Имя'
+                    multiline: False
+                    font_size: 16
+                    size_hint_y: .18
+                TextInput:
+                    id: enter_tel
+                    hint_text: 'Телефон'
+                    multiline: False
+                    font_size: 16 
+                    size_hint_y: .18
+                Button:
+                    text: 'Добавить абонента'
+                    size_hint_y: .18
+                    on_release:
+                        root.kv_add_abonent()
+                Button:
+                    text: 'Показать справочник'
+                    size_hint_y: .18
+                    on_release:
+                        root.kv_init_book()
+                Widget:
+                    size_hint_y: .6
+        GridLayout:
+            size_hint_x: .7
+            padding: [30, 0, 0, 0]
+            id: grid_phones 
+            cols: 
+            canvas:
+                Color:
+                    rgba: (0.9,0.9,0.9,1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+    BoxLayout:
+        size_hint_y: .07
+        canvas:
+            Color:
+                rgba: (0.9,0.9,0.9,1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            id: result_label
+            color: "#333233"
+            halign: "left"
+            multiline: False
